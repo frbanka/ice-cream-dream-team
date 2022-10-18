@@ -324,6 +324,19 @@
       bottom: -27px;
       left: 0;
     }
+    &__description {
+      position: absolute;
+      bottom: 50px;
+      left: 150px;
+      width: 114px;
+      height: 48px;
+      font-family: $dm-sans;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 8px;
+      line-height: 12px;
+      color: $main-white;
+    }
   }
 }
 picture img#pic3 {
@@ -335,10 +348,10 @@ picture img#pic3 {
   left: 34px;
 }
 
-figcaption {
+.header__description {
   position: absolute;
-  bottom: 50px;
-  left: 150px;
+  bottom: 60px;
+  left: 160px;
   width: 114px;
   height: 48px;
   font-family: $dm-sans;
@@ -452,20 +465,20 @@ picture img#pic4 {
         bottom: 48px;
         left: 64px;
       }
-      figcaption {
-        bottom: 130px;
-        left: 292px;
-        width: 200px;
-        height: 48px;
-        font-size: 14px;
-        line-height: 20px;
-      }
       picture img#pic4 {
         position: relative;
         width: 293px;
         height: 232px;
         left: 900px;
       }
+    }
+    &__description {
+      bottom: 130px;
+      left: 292px;
+      width: 200px;
+      height: 48px;
+      font-size: 14px;
+      line-height: 20px;
     }
     &__burger {
       display: none;
