@@ -15,6 +15,41 @@
 </head>
 
 <body>
+  <div class="mobile-menu js-menu-container" id="mobilemenu">
+    <button class="modal__close-btn js-close-menu">
+      <svg width="30" height="30">
+        <use href="./images/icons.svg#icon-close"></use>
+      </svg>
+    </button>
+    <div class="mobile-menu__item">
+      <div class="mobile-menu__center">
+        <button type="button" class="mobile-menu__button" data-modal-open>
+          <div class="mobile-menu__button--gap">
+            Buy now<svg height="8px" width="5px">
+              <use href="./images/icons.svg#icon-mobile-button"></use>
+            </svg>
+          </div>
+        </button>
+      </div>
+      <ul class="mobile-menu__links">
+        <li class="mobile-menu__links-item">
+          <a class="mobile-menu__link mobile-menu__link--current js-close-menu" href="#home">Home</a>
+        </li>
+        <li class="mobile-menu__links-item">
+          <a class="mobile-menu__link" href="#about">About us</a>
+        </li>
+        <li class="mobile-menu__links-item">
+          <a class="mobile-menu__link" href="#about">How it's made?</a>
+        </li>
+        <li class="mobile-menu__links-item">
+          <a class="mobile-menu__link" href="#products">Our products</a>
+        </li>
+        <li class="mobile-menu__links-item">
+          <a class="mobile-menu__link" href="#contacts">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
   <header class="header mobile-header" id="home">
     <div class="container">
       <nav class="header__nav-mobile">
@@ -115,36 +150,38 @@
         </div>
       </div>
       <div class="header__tablet-desktop-icons">
-        <figure>
+        <div>
           <picture>
             <source srcset="
                 ./images/spilling-milk.png    1x,
-                ./images/spilling-milk@2x.pmg 2x
-              " media="(min-width: 1280px)" />
+                ./images/spilling-milk@2x.png 2x
+              " media="(min-width: 1200px)" />
             <source srcset="
                 ./images/spilling-milk.png    1x,
-                ./images/spilling-milk@2x.pmg 2x
+                ./images/spilling-milk@2x.png 2x
               " media="(min-width: 768px)" />
             <source srcset="
                 ./images/spilling-milk.png    1x,
-                ./images/spilling-milk@2x.pmg 2x
+                ./images/spilling-milk@2x.png 2x
               " media="(min-width: 320px)" />
             <img id="pic3" src="./images/spilling-milk.png" alt="spilling-milk" />
           </picture>
-          <figcaption>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et
-            <button type="button" class="header__circle-button">
-              <img src="./images/arrow-right@2x.png" alt="arrow right button" width="26" height="26" />
-            </button>
-          </figcaption>
-        </figure>
-        <picture>
-          <source srcset="./images/woman.png 1x, ./images/woman@2x.png 2x" media="(min-width: 1280px)" />
-          <source srcset="./images/woman.png 1x, ./images/woman@2x.png 2x" media="(min-width: 768px)" />
-          <source srcset="./images/woman.png 1x, ./images/woman@2x.png 2x" media="(min-width: 320px)" />
-          <img id="pic4" src="./images/woman.png" alt="woman" />
-        </picture>
+        </div>
+        <div class="header__description">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et</p>
+          <button type="button" class="header__circle-button">
+            <img src="./images/arrow-right@2x.png" alt="arrow right button" width="26" height="26" />
+          </button>
+        </div>
+        <div>
+          <picture>
+            <source srcset="./images/woman.png 1x, ./images/woman@2x.png 2x" media="(min-width: 1280px)" />
+            <source srcset="./images/woman.png 1x, ./images/woman@2x.png 2x" media="(min-width: 768px)" />
+            <source srcset="./images/woman.png 1x, ./images/woman@2x.png 2x" media="(min-width: 320px)" />
+            <img id="pic4" src="./images/woman.png" alt="woman" />
+          </picture>
+        </div>
       </div>
     </div>
   </header>
@@ -456,41 +493,7 @@
       </div>
     </div>
   </footer>
-  <div class="mobile-menu js-menu-container" id="mobilemenu">
-    <button class=" modal__close-btn js-close-menu">
-      <svg width="30" height="30">
-        <use href="./images/icons.svg#icon-close"></use>
-      </svg>
-    </button>
-    <div class="mobile-menu__item">
-      <div class="mobile-menu__center">
-        <button type="button" class="mobile-menu__button" data-modal-open>
-          <div class="mobile-menu__button--gap">
-            Buy now<svg height="8px" width="5px">
-              <use href="./images/icons.svg#icon-button-mark"></use>
-            </svg>
-          </div>
-        </button>
-      </div>
-      <ul class="mobile-menu__links">
-        <li class="mobile-menu__links-item">
-          <a class="mobile-menu__link mobile-menu__link--current" href="#home">Home</a>
-        </li>
-        <li class="mobile-menu__links-item">
-          <a class="mobile-menu__link" href="#about">About us</a>
-        </li>
-        <li class="mobile-menu__links-item">
-          <a class="mobile-menu__link" href="#about">How it's made?</a>
-        </li>
-        <li class="mobile-menu__links-item">
-          <a class="mobile-menu__link" href="#products">Our products</a>
-        </li>
-        <li class="mobile-menu__links-item">
-          <a class="mobile-menu__link" href="#contacts">Contact</a>
-        </li>
-      </ul>
-    </div>
-  </div>
+
   <div class="backdrop is-hidden" data-modal>
     <div class="modal">
       <button type="button" class="modal__close-btn" data-modal-close>
