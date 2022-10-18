@@ -1,14 +1,24 @@
 .footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-family: $dm-sans;
-  width: 100%;
   background-color: $footer-BG;
   margin: 0 auto;
   padding-top: 113px;
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1280px;
+  }
 
   &__text-upercasse {
     margin-left: 22px;
     margin-right: 66px;
     text-transform: uppercase;
+    text-align: left;
   }
 
   &__text-one {
@@ -32,8 +42,7 @@
   &__icons {
     position: relative;
     display: flex;
-    right: 20px;
-    justify-content: end;
+    justify-content: flex-end;
     margin-top: 43px;
     gap: 30px;
     list-style-type: none;
@@ -61,10 +70,12 @@
 
   &__contact {
     position: relative;
+    text-align: right;
     font-weight: bold;
     font-size: 13px;
     margin-top: 46px;
     margin-bottom: 43px;
+    padding-right: 20px;
     &--phone {
       color: $main-red;
       text-decoration: none;
@@ -84,7 +95,7 @@
       line-height: 26px;
       border-top: solid 1px $light-gray;
       color: $dark-gray;
-      padding: 9px 91px 9px 82px;
+      padding: 25px 91px 25px 82px;
     }
   }
 }
