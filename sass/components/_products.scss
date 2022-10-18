@@ -1,0 +1,232 @@
+.products {
+  width: 100%;
+  padding: 121px 20px 98px;
+  margin: 0 auto;
+}
+.products__label {
+  display: block;
+  color: $main-pink;
+  @include font($fw: 400, $fs: 18px, $ff: $titan-one);
+  margin-bottom: 15px;
+}
+.products__header {
+  @include font($fw: 400, $fs: 34px, $ff: $titan-one, $lh: 34px);
+  color: $main-red;
+  margin-bottom: 144px;
+}
+.products-list {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 130px;
+}
+.product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  flex-grow: 1;
+  flex-basis: 100%;
+  padding: 161px 40px 41px;
+
+  &--icecream {
+    background-color: $main-pink;
+    border-radius: 24px;
+    position: relative;
+    &::before {
+      content: url("../images/product1.png");
+      position: absolute;
+      top: -114px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &--coffee {
+    background-color: $yellow-green;
+    border-radius: 24px;
+    &::before {
+      content: url("../images/product2.png");
+      position: absolute;
+      top: -114px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &--milkshake {
+    background-color: $lime-green;
+    border-radius: 24px;
+    &::before {
+      content: url("../images/product3.png");
+      position: absolute;
+      top: -114px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}
+
+.product__name {
+  @include font($fw: 400, $fs: 20px, $ff: $titan-one, $lh: 34px);
+  color: $main-white;
+  height: auto;
+  position: relative;
+  padding-bottom: 30px;
+  line-height: 15px;
+  margin-bottom: 10px;
+
+  &::after {
+    content: "...";
+    @include font($fs: 20px, $ls: 0.1em);
+    color: $main-white;
+    position: relative;
+    bottom: -30px;
+    left: 0;
+  }
+}
+
+.product__description {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  @include font($fw: 700, $ff: $dm-sans, $fs: 14px, $lh: 152%);
+  color: $main-white;
+  margin-bottom: 30px;
+
+  &--details {
+    position: relative;
+    color: $main-red;
+    display: none;
+  }
+}
+
+.product-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: $main-white;
+  border: none;
+  border-radius: 50%;
+  transition: 250ms ease;
+  &:hover {
+    background-color: $main-red;
+    transition: 250ms ease;
+    cursor: pointer;
+    .product-button__icon {
+      fill: $main-white;
+    }
+  }
+}
+
+.product-button__icon {
+  width: 15px;
+  height: 15px;
+  fill: $main-red;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+  .products__label {
+    @include font($fs: 26px, $lh: 30px, $ff: $titan-one);
+  }
+
+  .products__header {
+    @include font($fs: 48px, $lh: 55px, $ff: $titan-one);
+    margin-bottom: 150px;
+  }
+  .products-list {
+    column-gap: 20px;
+    row-gap: 0;
+  }
+
+  .product {
+    padding: 152px 15px 40px;
+    flex-basis: calc((100% - 2 * 20px) / 3);
+
+    &__name {
+      @include font($fs: 20px, $lh: 23px, $ff: $titan-one, $fw: 400);
+    }
+    &__description {
+      line-height: 176%;
+    }
+
+    &--icecream {
+      &::before {
+        content: url("../images/tb-product1.png");
+        position: absolute;
+        top: -105px;
+      }
+    }
+
+    &--coffee {
+      &::before {
+        content: url("../images/tb-product2.png");
+        position: absolute;
+        top: -105px;
+      }
+    }
+
+    &--milkshake {
+      &::before {
+        content: url("../images/tb-product3.png");
+        position: absolute;
+        top: -105px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .products__label {
+    @include font($fs: 30px, $lh: 34px, $ff: $titan-one);
+  }
+
+  .products__header {
+    @include font($fs: 58px, $lh: 66px, $ls: 0.06em, $ff: $titan-one);
+    margin-bottom: 259px;
+  }
+
+  .products-list {
+    column-gap: 27px;
+    row-gap: 0;
+  }
+
+  .product {
+    padding: 163px 44px 50px;
+    flex-basis: calc((100% - 2 * 27px) / 3);
+    height: auto;
+
+    &__name {
+      @include font($fs: 30px, $lh: 34px, $ff: $titan-one, $fw: 500);
+    }
+
+    &__description {
+      @include font($fs: 16px, $lh: 176%);
+      margin-bottom: 62px;
+    }
+
+    &--icecream {
+      &::before {
+        content: url("../images/pc-product1.png");
+        position: absolute;
+        top: -210px;
+      }
+    }
+
+    &--coffee {
+      &::before {
+        content: url("../images/pc-product2.png");
+        position: absolute;
+        top: -210px;
+      }
+    }
+
+    &--milkshake {
+      &::before {
+        content: url("../images/pc-product3.png");
+        position: absolute;
+        top: -210px;
+      }
+    }
+  }
+}
